@@ -1,9 +1,9 @@
 {
-  "name": "prop-types",
+  "name": "@catalytic/prop-types",
   "version": "15.6.0",
   "description": "Runtime type checking for React props and similar objects.",
   "main": "index.js",
-  "license": "MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "files": [
     "LICENSE",
     "README.md",
@@ -16,14 +16,17 @@
     "prop-types.min.js",
     "lib"
   ],
-  "repository": "reactjs/prop-types",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/catalyticlabs/prop-types.git"
+  },
   "keywords": [
     "react"
   ],
   "bugs": {
-    "url": "https://github.com/reactjs/prop-types/issues"
+    "url": "https://github.com/catalyticlabs/prop-types/issues"
   },
-  "homepage": "https://facebook.github.io/react/",
+  "homepage": "https://github.com/catalyticlabs/prop-types",
   "dependencies": {
     "fbjs": "^0.8.16",
     "loose-envify": "^1.3.1",
