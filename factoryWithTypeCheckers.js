@@ -364,6 +364,11 @@ module.exports = function(isValidElement, throwOnDirectAccess) {
       if (propType !== 'object') {
         return new PropTypeError('Invalid ' + location + ' `' + propFullName + '` of type `' + propType + '` ' + ('supplied to `' + componentName + '`, expected `object`.'));
       }
+      for (var key in propValue) {
+        if (!shapeTypes[key]) {
+          return new PropTypeError('Unknown key `' + key + '` found on `' + propFullName + '` supplied to `' + componentName + '`');
+        }
+      }
       for (var key in shapeTypes) {
         var checker = shapeTypes[key];
         if (!checker) {
