@@ -118,9 +118,9 @@ describe('PropTypesDevelopmentStandalone', () => {
         'testComponent',
         null,
       );
-      expect(console.error.calls.argsFor(0)[0]).toEqual(
+      expect(console.error.calls.argsFor(0)[0]).toContain(
         'Warning: Failed prop type: testComponent: prop type `foo` is invalid; ' +
-        'it must be a function, usually from the `prop-types` package.'
+        'it must be a function, usually from the `prop-types` package'
       );
     });
 
@@ -997,8 +997,12 @@ describe('PropTypesDevelopmentStandalone', () => {
       typeCheckPass(PropTypes.shape({}).isRequired, {});
     });
 
-    it('should not warn for non specified types', () => {
-      typeCheckPass(PropTypes.shape({}), {key: 1});
+    it('should warn for non specified types', () => {
+      typeCheckFail(
+        PropTypes.shape({}),
+        {key: 1},
+        'Warning: Failed prop type: Unknown key `key` found on `testProp` supplied to `testComponent`',
+      );
     });
 
     it('should not warn for valid types', () => {
