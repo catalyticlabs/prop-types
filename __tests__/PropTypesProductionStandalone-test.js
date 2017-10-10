@@ -9,7 +9,7 @@
 
 'use strict';
 
-describe('PropTypesProductionStandalone', function() {
+describe.skip('PropTypesProductionStandalone', function() {
   var React;
   var PropTypes;
 
