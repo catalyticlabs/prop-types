@@ -27,6 +27,9 @@
     "url": "https://github.com/catalyticlabs/prop-types/issues"
   },
   "homepage": "https://github.com/catalyticlabs/prop-types",
+  "publishConfig": {
+    "registry": "https://npm.cloudsmith.io/pagerduty/npm/"
+  },
   "dependencies": {
     "fbjs": "^0.8.16",
     "loose-envify": "^1.3.1",
